@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Help Nearby</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Help Nearby</h1>
+    <p>Connecting people to NGOs, shelters, and donation centers</p>
+  </header>
+
+  <div class="main-container">
+    <!-- Left Column -->
+    <div class="left-column">
+      <h2>Choose Role</h2>
+      <button onclick="showAdmin()">👩‍💼 Admin</button>
+      <button onclick="showUser()">🙋‍♂️ User</button>
+
+      <!-- Optional image -->
+      <img src="image.jpeg" alt="Help Nearby" class="side-image" />
+    </div>
+
+    <!-- Right Column -->
+    <div class="right-column" id="rightColumn">
+      <h1>Please select a role to begin.</h1>
+
+    </div>
+  </div>
+
+  <!-- Donation Modal -->
+  <div id="donationModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeDonateForm()">&times;</span>
+      <h2>Donate to <span id="donateOrgName"></span></h2>
+      <p>Enter donation amount (for demo only):</p>
+      <input type="number" id="donationAmount" placeholder="₹ Amount" />
+      <button onclick="submitDonation()">Proceed to Donate</button>
+      <p style="font-size: 0.8rem; margin-top: 10px; color: gray;">
+        (This is a demo. No real money is involved.)
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Made for SDG Goal 1: No Poverty</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
